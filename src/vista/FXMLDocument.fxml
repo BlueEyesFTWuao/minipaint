@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.embed.swing.*?>
+<?import javafx.scene.canvas.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="480.0" prefWidth="560.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="minipaint1.FXMLDocumentController">
+   <children>
+      <Canvas fx:id="lienzo" height="344.0" layoutX="16.0" layoutY="116.0" onMouseClicked="#crearMouseCuadrado" onMouseEntered="#label1" width="529.0" />
+      <MenuBar layoutY="-2.0" prefHeight="32.0" prefWidth="560.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem fx:id="crearCirculo" mnemonicParsing="false" onAction="#crearCirculo" text="Crear Circulo" />
+              <MenuItem mnemonicParsing="false" onAction="#crearCuadrado" text="Crear Cuadrado" />
+                  <MenuItem mnemonicParsing="false" onAction="#triangulo" text="Crear Triangulo" />
+                  <MenuItem mnemonicParsing="false" onAction="#limpiar" text="Limpiar" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Color">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#ctriangulo" text="Color Triangulo" />
+                  <MenuItem mnemonicParsing="false" onAction="#ccuadrado" text="Color Cuadrado" />
+                  <MenuItem mnemonicParsing="false" onAction="#ccirculo" text="Color Circulo" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="XML">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#guardarxml" text="Guardar" />
+              </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <Circle id="cr" fx:id="cr" fill="WHITE" layoutX="281.0" layoutY="288.0" radius="100.0" stroke="WHITE" strokeType="INSIDE" />
+      <Label fx:id="coor" layoutX="16.0" layoutY="87.0" />
+   </children>
+</AnchorPane>
